@@ -1,0 +1,39 @@
+@import '../../vars.module.scss';
+
+.paper {
+   max-width: 570px;
+}
+
+.card {
+   padding: 15px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   .actions {
+      width: 100%;
+      padding-bottom:  0;
+         .btn {
+            width: 100%;
+            color: $cWhite;
+            background-color: $cPurple;
+            transition: $transition;
+            &:hover {
+               background-color: $cWhite;
+               color: $cPurple;
+            }
+         }
+      }
+}
+
+.content {
+   .title {
+      color: $cPurple;
+      font-weight: 700;
+      font-size: 26px;
+   }
+   .text {
+      text-align: justify;
+      width: 100%;
+      color: $cPurpleSecondary;
+   }
+}

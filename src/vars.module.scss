@@ -1,0 +1,27 @@
+$cPurple: #9340fe;
+$cPurpleSecondary: #d268cc;
+$cLightGrey: #eee;
+$cGrey: #9e9e9e;
+$cWhite: #fff;
+$cBlack: rgba(0, 0, 0, 0.8);
+$transition: 0.3s;
+$scaleUp: scale(1.2);
+
+.icons {
+   color: $cWhite;
+
+   &:hover {
+      cursor: pointer;
+      transform: $scaleUp;
+      transition: $transition;
+   }
+   &:active {
+      transform: scale(0.7);
+      transition: $transition;
+   }
+}
+
+@mixin icon ($color) {
+   color: $color
+}
+

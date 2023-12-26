@@ -1,0 +1,89 @@
+@import '../../vars.module.scss';
+
+.playbar {
+   height: 100px;
+   width: 100%;
+   position: fixed;
+   left: 0;
+   bottom: -2px;
+   background-color: $cPurple;
+   background-image: $cPurple;
+   & p, & h5 {
+      color: $cWhite;
+   }
+}
+
+.gridContainer {
+   height: 100%;
+}
+
+.left {
+   .icons {
+      @include icon($cWhite);
+   }
+}
+
+.center {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   .buttons {
+      max-width: 150px;
+   }
+   .timing {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .playBtn {
+         background-color: $cWhite !important;
+      }
+      .sliderTime {
+         margin: 0 20px;
+         color: $cWhite;
+      }
+   }
+}
+
+.btn {
+   color: $cWhite ;
+}
+
+.right {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   color: $cWhite;
+   .sliderVolume {
+      max-width: 100px;
+      color: $cWhite;
+      margin-left: 10px;
+   }
+}
+
+.iconFix {
+   position: relative;
+   right: 1.2pt;
+}
+
+@media (max-width: 900px) {
+   .playbar {
+      height: 40vh;
+      .container {
+         .left {
+            justify-content: center ;
+         }
+         .right {
+            height: auto;
+         }
+      }
+   }
+}
+
+@media (max-width: 600px) {
+   .credits > h5, p {
+      font-size: 14px;
+   }
+}

@@ -1,0 +1,18 @@
+@import '../../vars.module.scss';
+
+.search {
+   flex: 1 1 auto;
+   .paper {
+      background-color: $cWhite;
+      .iconSearch {
+         @include icon($cPurpleSecondary);
+         cursor: pointer;
+      }
+      & .icons {
+         @include icon($cPurpleSecondary);
+      }
+      & .input {
+         color: $cPurpleSecondary;
+      }
+   }
+}

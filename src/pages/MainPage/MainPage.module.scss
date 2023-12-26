@@ -1,0 +1,55 @@
+@import '../../vars.module.scss';
+
+.infoSection {
+    padding: 10px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    flex: 1;
+    margin: 10px 20px;
+    overflow: auto;
+    padding: 15px;
+}
+
+.genres {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+    margin: 10px 0 0px 10px;
+    overflow: scroll;
+    padding: 15px;
+    max-height: 69.5vh;
+    .genresTitle {
+        color: $cPurpleSecondary;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .infoSection {
+        padding: 0;
+        padding-bottom: 10px;
+    }
+
+    .genres {
+        margin: 0 0 10px 10px;
+        
+    }
+}
+
+@media (max-width: 600px) {
+    .list {
+        padding: 3px;
+        margin: 5px;
+    }
+    .genres {
+        margin: 0 0 10px 0;
+        
+    }
+}

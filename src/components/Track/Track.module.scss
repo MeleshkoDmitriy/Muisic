@@ -1,0 +1,118 @@
+@import '../../vars.module.scss';
+
+.track {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  height: 60px;
+  .credits {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .preview {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+  }
+}
+ .playing * {
+    color: $cPurple;
+}
+
+.like {
+  color: $cPurpleSecondary
+}
+
+.modal {
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    .iconClose {
+      color: $cPurpleSecondary;
+    }
+  }
+  .title {
+    color: $cPurpleSecondary;
+  }
+  .social {
+    color: $cPurpleSecondary;
+    &:hover {
+      color: $cWhite;
+      cursor: pointer;
+      transform: $scaleUp;
+      transition: $transition;
+      background-color: $cPurple;
+    }
+    &:active {
+      transform: scale(0.8);
+      transition: $transition;
+    }
+  }
+  .link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    max-height: 50px;
+    .copyBtn {
+      margin-left: 10px;
+      background-color: $cPurpleSecondary;
+      color: $cWhite;
+      transition: $transition;
+      &:hover {
+        background-color: $cWhite;
+        color: $cPurple;
+        transform: $scaleUp;
+      }
+    
+    }
+  }
+
+}
+
+
+@media (max-width: 600px) {
+  .track {
+    gap: 5px;
+    .preview {
+    width: 30px;
+    height: 30px;
+    }
+  }
+  .controlBtns,
+  .actions {
+    font-size: 15px !important;
+  }
+  .credits > h6 {
+    font-size: 12px !important;
+  }
+  .duration {
+    display: none;
+  }
+
+  .modal {
+    margin: 0 auto;
+    .wrapper {
+      box-sizing: border-box;
+      height:200px;
+      width: 300px;
+      justify-content: center;
+      gap: 5px;
+      padding:10px;
+      padding-bottom: 70px;
+      .title {
+        font-size: 14px;
+      }
+      .link {
+        flex-direction: column;
+        .copyBtn {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,14 @@
+@import '../../../vars.module.scss';
+
+.wrapper {
+   margin: 15px 0;
+   width: 100%;
+   .content {
+      margin: 0 15px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items:start;
+      gap: 20px;
+   }
+}

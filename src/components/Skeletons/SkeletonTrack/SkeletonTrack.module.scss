@@ -1,0 +1,12 @@
+@import '../../../vars.module.scss';
+
+.container {
+   display: flex;
+   align-items: center;
+   width: 100%;
+   gap: 20px;
+   height: 60px;
+   .wide {
+      flex: 1 1 auto;
+   }
+}

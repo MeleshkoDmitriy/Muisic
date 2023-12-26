@@ -1,0 +1,13 @@
+@import '../../../vars.module.scss';
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   .text {
+      color: $cPurpleSecondary;
+      font-size: 20px;
+   }
+}

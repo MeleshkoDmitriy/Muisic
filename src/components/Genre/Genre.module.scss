@@ -1,0 +1,12 @@
+@import '../../vars.module.scss';
+
+.wrapper {
+      .active {
+         background-color: $cPurple;
+         color: $cWhite;
+      }
+      .info {
+         text-align: center;
+         text-transform: uppercase;
+      }
+}
