@@ -128,7 +128,7 @@ export const Header = ({toggleDrawer}) => {
                               <FavoriteIcon fontSize="large" className={styles.icons} />
                            </Badge>
                         </IconButton>
-                        <a target='blank' href='https://github.com/DmitriyMeleshko/musicApp'>
+                        <a target='blank' href='https://github.com/MeleshkoDmitriy/Muisic'>
                            <IconButton sx={{ display: { xs: 'none', sm: 'block' }}}>
                               <Badge >
                                     <GitHubIcon fontSize="large" className={styles.icons} />
