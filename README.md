@@ -1,5 +1,5 @@
 <h1>Music App MUISIC</h1>
-<h2><a href='https://deft-stardust-687370.netlify.app/'>Click to see Demo</a></h2>
+<h2><a href='https://deft-stardust-687370.netlify.app/' target='_blank'>Click to see Demo</a></h2>
 <h3>HTML, SCSS in Modules, Javascript, React, Material-UI, Axios, Vite</h3>
 <h3>You able to:</h3>
 <ul>
