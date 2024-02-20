@@ -1,19 +1,30 @@
 import { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
-const defaultTrack = tracksList[0];
-
-const audio = new Audio(defaultTrack.src);
-
 export const AudioContext = createContext({})
 
 let data = null;
 let genres = null;
 
+const defaultTrack = {
+   id: 1,
+   src: "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/250/what-i-say-1668733254-7bXF48DYkS.mp3",
+   preview: "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/154/1000x0/no-way-back-1656410436-lmCSrM15Fp.jpg",
+   duration: 215,
+   title: "No Way Back",
+   artists: "Custody",
+   liked: false
+};
+
+const audio = new Audio(defaultTrack.src);   
+
 export const AudioProvider = ({children}) => {
 
-   const [tracklist, setTracklist] = useState([])
+   const [tracklist, setTracklist] = useState([defaultTrack])
    const [isLoading, setLoading] = useState(true);
+
+
+   console.log(tracklist[0])
 
    const [currentTrack, setCurrentTrack] = useState(defaultTrack);
    const [isPlaying, setPlaying] = useState(false);
@@ -37,8 +48,8 @@ export const AudioProvider = ({children}) => {
          setLoading(true);
 
          const [tracklistResponse, genresResponce] = await Promise.all([
-            axios.get('https://22a059f79fb4c54b.mokky.dev/tracklist'),
-            axios.get('https://22a059f79fb4c54b.mokky.dev/genres'),
+            axios.get('https://1048eaa8e8b3deab.mokky.dev/tracklist'),
+            axios.get('https://1048eaa8e8b3deab.mokky.dev/genres'),
          ])
 
          data = tracklistResponse.data;
@@ -149,13 +160,13 @@ const likeHandler = async (obj) => {
 
    try {
       if(favorites.find(el => el.id === obj.id)) {
-         await axios.patch(`https://22a059f79fb4c54b.mokky.dev/tracklist/${foundedId}`, {liked: false})
+         await axios.patch(`https://1048eaa8e8b3deab.mokky.dev/tracklist/${foundedId}`, {liked: false})
          setFavorites((prev) => prev.filter((item) => item.id !== obj.id))
          setLikes((prev) => prev.filter((item) => item.id !== obj.id))
          setSnack(`You unliked: ${obj.artists} - ${obj.title}`)
          handleSnackClick()
       } else {
-         await axios.patch(`https://22a059f79fb4c54b.mokky.dev/tracklist/${foundedId}`, {liked: true})
+         await axios.patch(`https://1048eaa8e8b3deab.mokky.dev/tracklist/${foundedId}`, {liked: true})
          setFavorites(prev => [...prev, obj])
          setLikes(prev => [...prev, obj])
          setSnack(`You liked: ${obj.artists} - ${obj.title}`)
