@@ -1,7 +1,9 @@
 import { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
-const audio = new Audio();
+const defaultTrack = tracksList[0];
+
+const audio = new Audio(defaultTrack.src);
 
 export const AudioContext = createContext({})
 
@@ -13,7 +15,7 @@ export const AudioProvider = ({children}) => {
    const [tracklist, setTracklist] = useState([])
    const [isLoading, setLoading] = useState(true);
 
-   const [currentTrack, setCurrentTrack] = useState(tracklist[0]);
+   const [currentTrack, setCurrentTrack] = useState(defaultTrack);
    const [isPlaying, setPlaying] = useState(false);
    const [volume, setVolume] = useState(0)
 
