@@ -13,7 +13,7 @@ import { AppSnackbar } from '../../components/AppSnackbar/AppSnackbar';
 
 export const MainPage = () => {
 
-   const {tracklist, isLoading, isNotFound, genre} = useContext(AudioContext)
+   const {tracklist, isLoading, isNotFound, genre} = useContext(AudioContext);
 
    const renderTracks = () => {
       return (

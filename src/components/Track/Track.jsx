@@ -31,18 +31,18 @@ export const Track = (
 
    const isCurrentTrack = currentTrack.id === track.id;
 
-   const [open, setOpen] = useState(false)
-   const [isCopy, setCopy] = useState(false)
-   const [link, setLink] = useState(src)
+   const [open, setOpen] = useState(false);
+   const [isCopy, setCopy] = useState(false);
+   const [link, setLink] = useState(src);
 
    const copyLink = () => {
       navigator.clipboard.writeText(link)
-      setCopy(true)
+      setCopy(true);
    }
 
    const handleClose = () => {
       setOpen(false);
-      setCopy(false)
+      setCopy(false);
    } 
    const handleOpen = () => setOpen(true)
 
@@ -80,8 +80,8 @@ export const Track = (
             </IconButton>
             <img className={styles.preview} src={preview} alt="" />
             <Box className={styles.credits}>
-               <Typography variant='subtitle2' fontSize='20px' >{title}</Typography>
-               <Typography variant='subtitle1'>{artists}</Typography>
+               <Typography variant='subtitle2' fontSize='16px' style={{lineHeight: '16px'}}>{title}</Typography>
+               <Typography variant='subtitle1' fontSize='14px' >{artists}</Typography>
             </Box>
             <Tooltip disableFocusListener disableTouchListener title="Click to get a download link">
             <a href={src} target='blank' download>
